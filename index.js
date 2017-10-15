@@ -1,4 +1,4 @@
-const Syslogd = require('syslogd')
+const Syslogd = require('./syslogd')
 
 const co            = require("co");
 const moment        = require('moment');

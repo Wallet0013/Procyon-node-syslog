@@ -77,15 +77,15 @@ function parser(msg, rinfo) {
     const last2SpaceIndex = format.lastIndexOf(' ', lastSpaceIndex - 1) // hostname cannot contain ' '
     const hostname = format.substring(last2SpaceIndex + 1, lastSpaceIndex)
     // time is complex because don't know if it has year
-    let time = format.substring(priIndex + 1, last2SpaceIndex)
-    time = new Date(time)
-    time.setYear(new Date().getFullYear()) // fix year to now
+    // let time = format.substring(priIndex + 1, last2SpaceIndex)
+    // time = new Date(time)
+    // time.setYear(new Date().getFullYear()) // fix year to now
     return {
             facility: pri[0],
             severity: pri[1],
             tag: tag,
             // , time: time
-            time: moment().format(),
+            timestamp: moment().format('x'),
             hostname: hostname,
             address: rinfo.address,
             family: rinfo.family,

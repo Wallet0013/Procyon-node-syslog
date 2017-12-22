@@ -14,6 +14,7 @@ Syslogd(function(info) {
         console.log("info" , info);
 
         db = yield MongoClient.connect(url);
+
         yield db.collection("syslog").insertOne(info);
         yield db.close();
     }).catch(function(err){

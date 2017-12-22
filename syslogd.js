@@ -85,7 +85,7 @@ function parser(msg, rinfo) {
             severity: pri[1],
             tag: tag,
             // , time: time
-            timestamp: moment().format('x'),
+            timestamp: Number(moment().format('x')),
             hostname: hostname,
             address: rinfo.address,
             family: rinfo.family,

@@ -6,6 +6,8 @@ RUN apt-get update && \
 
 WORKDIR /home
 
+ADD dummy02 /data/
+
 RUN	git clone https://github.com/Wallet0013/Procyon-node-syslog.git
 
 WORKDIR /home/Procyon-node-syslog
